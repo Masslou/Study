@@ -8,6 +8,7 @@ public class Calculator {
     }
 
     public static ArrayList questionMethod() {
+
         Scanner scan = new Scanner(System.in);
         int firstValue;
         int secondValue;
@@ -63,13 +64,10 @@ public class Calculator {
                         printFunction(operand1 / operand2);
                         break;
                     }
-
             }
-
         } else {
             System.out.println("NULL");
         }
-
     }
 
     public static void printFunction(long args) {
