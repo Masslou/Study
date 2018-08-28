@@ -20,18 +20,18 @@ public class Bingo {
 
 
     public static void Bingo(int a) {
-        int usersValue = 0, numOfAttemps = 0;
-        int template = a;
-        boolean flagBreak = false;
 
+        int usersValue = 0, numOfAttemps = 1;
+        int template = a;
 
         do {
 
-            Scanner scan = new Scanner(System.in);
+            Scanner scanner = new Scanner(System.in);
             System.out.println("Let's play Bingo! Pick a positive integer between 0 and 100");
-            if (scan.hasNextInt()) {
+            if (scanner.hasNextInt()) {
+                System.out.println("Attemps numer " + numOfAttemps);
 
-                usersValue = scan.nextInt();
+                usersValue = scanner.nextInt();
 
                 if (template > usersValue) {
 
@@ -45,26 +45,20 @@ public class Bingo {
 
                 } else {
 
-                    System.out.println("Congratulations! You guessed from attemps  number " + numOfAttemps);
-                    flagBreak = true;
+                    System.out.println("Congratulations, you guessed!");
                     break;
                 }
 
             } else {
                 System.out.println("See you!");
-                flagBreak = true;
                 break;
             }
-        }
-        while (randomValue() != usersValue);
 
-        if (!flagBreak) {
-            System.out.println("Attemps numer " + numOfAttemps);
-
-        }
+        } while (randomValue() != usersValue);
 
     }
 
 }
+
 
 
