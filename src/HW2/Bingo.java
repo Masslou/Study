@@ -20,37 +20,47 @@ public class Bingo {
 
 
     public static void Bingo(int a) {
-        int usersValue;
-        int numOfAttemps = 0;
+        int usersValue = 0, numOfAttemps = 0;
         int template = a;
+        boolean flagBreak = false;
 
 
         do {
 
             Scanner scan = new Scanner(System.in);
             System.out.println("Let's play Bingo! Pick a positive integer between 0 and 100");
-            usersValue = scan.nextInt();
+            if (scan.hasNextInt()) {
 
-            if (template > usersValue) {
+                usersValue = scan.nextInt();
 
-                System.out.println("My number is bigger");
-                numOfAttemps++;
+                if (template > usersValue) {
 
-            } else if (template < usersValue) {
+                    System.out.println("My number is bigger");
+                    numOfAttemps++;
 
-                System.out.println("Your number is bigger than mine");
-                numOfAttemps++;
+                } else if (template < usersValue) {
+
+                    System.out.println("Your number is bigger than mine");
+                    numOfAttemps++;
+
+                } else {
+
+                    System.out.println("Congratulations! You guessed from attemps  number " + numOfAttemps);
+                    flagBreak = true;
+                    break;
+                }
 
             } else {
-
-                System.out.println("Congratulations! You guessed from: ");
+                System.out.println("See you!");
+                flagBreak = true;
                 break;
             }
+        }
+        while (randomValue() != usersValue);
 
-
-        } while (randomValue() != usersValue);
-        {
+        if (!flagBreak) {
             System.out.println("Attemps numer " + numOfAttemps);
+
         }
 
     }
