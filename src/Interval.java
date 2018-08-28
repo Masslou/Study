@@ -25,7 +25,6 @@ public class Interval {
                 System.out.println("Value " + value + " in range from 50 to 100");
             }
 
-
         } else {
             System.out.println("ERROR: Value must be integer and in range from 0 to 100");
         }

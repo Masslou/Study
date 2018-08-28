@@ -44,15 +44,15 @@ public class Calculator {
             switch (sign) {
 
                 case "+":
-                    printFunction(operand1 + operand2);
+                    print(operand1 + operand2);
                     break;
 
                 case "-":
-                    printFunction(operand1 - operand2);
+                    print(operand1 - operand2);
                     break;
 
                 case "*":
-                    printFunction(operand1 * operand2);
+                    print(operand1 * operand2);
                     break;
 
                 case "/":
@@ -61,7 +61,7 @@ public class Calculator {
                         break;
 
                     } else {
-                        printFunction(operand1 / operand2);
+                        print(operand1 / operand2);
                         break;
                     }
             }
@@ -70,7 +70,7 @@ public class Calculator {
         }
     }
 
-    public static void printFunction(long args) {
+    public static void print(long args) {
         System.out.println(args);
     }
 }
