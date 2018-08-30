@@ -3,7 +3,7 @@ package HW3;
 public class Anagram {
     public static void main(String[] args) {
 
-        String str1 = "Я в мире — сирота.";
+        String str1 = "Я у мире — сирота.";
         String str2 = "Я в риме — Ариост.";
 
         String[] words1 = str1.replaceAll("[^а-яА-Я ]", "").toLowerCase().split("\\s+");
@@ -24,7 +24,6 @@ public class Anagram {
 
                     for (int j = 0; j < templateArray1.length; j++) {
                         if (words2[i].indexOf(templateArray1[j]) == -1) {
-                            System.out.println("Слова не являются аннаграммой");
                             flag = true;
                             break;
                         }
