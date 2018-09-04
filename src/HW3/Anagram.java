@@ -1,45 +1,34 @@
 package HW3;
 
+import java.util.Arrays;
+
 public class Anagram {
     public static void main(String[] args) {
 
-        String str1 = "Я у мире — сирота.";
-        String str2 = "Я в риме — Ариост.";
+        String firstString = "Вечность";
+        String secondString = "Свет - ночь1";
 
-        String[] words1 = str1.replaceAll("[^а-яА-Я ]", "").toLowerCase().split("\\s+");
-        String[] words2 = str2.replaceAll("[^а-яА-Я ]", "").toLowerCase().split("\\s+");
+        String pattern = "[^а-яА-Яa-zA-Z]";
 
-        if (words1.length == words2.length) {
-            boolean flag = false;
-            for (int i = 0; i < words1.length; i++) {
-                if (!words1[i].equals(words2[i])) {
-                    String[] templateArray1 = words1[i].split("");
-                    String[] templateArray2 = words2[i].split("");
+        char[] lettersFirst = firstString.replaceAll(pattern, "").toLowerCase().toCharArray();
+        char[] lettersSecond = secondString.replaceAll(pattern, "").toLowerCase().toCharArray();
 
-                    if (templateArray1.length != templateArray2.length) {
 
-                        flag = true;
-                        break;
-                    }
+        if (lettersFirst.length == lettersSecond.length) {
 
-                    for (int j = 0; j < templateArray1.length; j++) {
-                        if (words2[i].indexOf(templateArray1[j]) == -1) {
-                            flag = true;
-                            break;
-                        }
+            Arrays.sort(lettersFirst);
+            Arrays.sort(lettersSecond);
 
-                    }
-
-                }
-            }
-            if (flag) {
-                System.out.println("Слова не являются анаграммой");
+            if (Arrays.equals(lettersFirst, lettersSecond)) {
+                System.out.println("Это анаграмма!");
             } else {
-                System.out.println("Слова являются анаграммой");
+                System.out.println("Это не анаграмма!");
             }
+
         } else {
-            System.out.println("Слова не являются анаграммой");
+            System.out.println("Это не анаграмма!");
         }
     }
+
 }
 
