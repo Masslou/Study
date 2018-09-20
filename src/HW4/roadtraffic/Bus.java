@@ -5,25 +5,50 @@ import HW4.passengers.Human;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class use for work with object Bus
+ */
+
 public class Bus {
 
     public static final int COUNT_OF_SEATS = 30;
 
     private List<Human> passengers = new ArrayList<>();
 
+    /**
+     * Use this method when we need to take bus on the next point of route
+     *
+     * @param station use object BusStation
+     */
+
     public void move(BusStation station) {
         System.out.println(String.format("Bus start move to %s station", station.getStationName()));
     }
 
+    /**
+     * Use this method when we need to stop bus on the next point
+     *
+     * @param station use object BusStation
+     */
     public void stop(BusStation station) {
         System.out.println(String.format("Bus stopped at the %s station", station.getStationName()));
     }
 
+    /**
+     * Use this method when we haven't another action before start and stop
+     *
+     * @param station use object BusStation
+     */
     public void moveAndStop(BusStation station) {
         System.out.println(String.format("Bus start move to %s station", station.getStationName()));
         System.out.println(String.format("Bus stopped at the %s station", station.getStationName()));
     }
 
+    /**
+     * Use this method after method bus.stop when we have to add more than one passenger to bus
+     *
+     * @param passengers use object Human
+     */
     public void passengersComeIn(List<Human> passengers) {
         for (int i = 0; i < passengers.size(); i++) {
             if (this.passengers.size() <= COUNT_OF_SEATS) {
@@ -40,7 +65,11 @@ public class Bus {
         }
     }
 
-
+    /**
+     * Use this method after method bus.stop when we have to add just one passenger to bus
+     *
+     * @param passenger use object Human
+     */
     public void passengersComeIn(Human passenger) {
         if (this.passengers.size() <= COUNT_OF_SEATS) {
             if (passenger.getTemplate() == null) {
@@ -53,6 +82,12 @@ public class Bus {
         }
     }
 
+    /**
+     * Use this method after bus.stop when more than one passenger must out
+     *
+     * @param passengers use object Human
+     */
+
     public void passengersOut(List<Human> passengers) {
         for (Human passenger : passengers) {
             if (this.passengers.remove(passenger)) {
@@ -64,6 +99,11 @@ public class Bus {
         }
     }
 
+    /**
+     * Use this method after bus.stop when just one passenger must out
+     *
+     * @param passenger use object Human
+     */
     public void passengersOut(Human passenger) {
         if (this.passengers.remove(passenger)) {
             if (passenger.getTemplate() != null) {

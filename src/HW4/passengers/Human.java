@@ -1,6 +1,10 @@
 package HW4.passengers;
 
+/**
+ * Class describes bus passengers that can take a dog at bus.
+ */
 public class Human {
+
     private String name;
     private String template = null;
 
@@ -17,6 +21,11 @@ public class Human {
         return name;
     }
 
+    /**
+     * Dog can't get on the bus without human
+     *
+     * @param dog use object type Dog
+     */
     public void takeDog(Dog dog) {
         template = name;
         StringBuffer humanName = new StringBuffer(name);
