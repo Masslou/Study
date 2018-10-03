@@ -1,4 +1,4 @@
-package CW5;
+package classwork.cw5;
 
 public class Incapsulation {
 

@@ -1,4 +1,4 @@
-package HW4.roadtraffic;
+package homework.hw4.roadtraffic;
 
 public class BusStation {
     String stationName;

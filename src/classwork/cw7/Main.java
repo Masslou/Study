@@ -1,4 +1,4 @@
-package CW7;
+package classwork.cw7;
 
 public class Main {
     public static void main(String[] args) {

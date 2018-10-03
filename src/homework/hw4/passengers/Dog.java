@@ -1,4 +1,4 @@
-package HW4.passengers;
+package homework.hw4.passengers;
 
 /**
  * Class describes dog

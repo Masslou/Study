@@ -1,9 +1,9 @@
-package HW4;
+package homework.hw4;
 
-import HW4.passengers.Dog;
-import HW4.passengers.Human;
-import HW4.roadtraffic.Bus;
-import HW4.roadtraffic.BusStation;
+import homework.hw4.passengers.Dog;
+import homework.hw4.passengers.Human;
+import homework.hw4.roadtraffic.Bus;
+import homework.hw4.roadtraffic.BusStation;
 
 import java.util.ArrayList;
 import java.util.List;

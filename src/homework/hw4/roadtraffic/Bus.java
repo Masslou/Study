@@ -1,6 +1,6 @@
-package HW4.roadtraffic;
+package homework.hw4.roadtraffic;
 
-import HW4.passengers.Human;
+import homework.hw4.passengers.Human;
 
 import java.util.ArrayList;
 import java.util.List;
