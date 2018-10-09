@@ -14,10 +14,18 @@ public class Car {
         this.speed = speed;
         this.transmissionType = transmissionType;
         this.modelModification = modelModification;
+
     }
 
+    public Car(int speed, String transmissionType, String modelModification) {
+        this.speed = speed;
+        this.transmissionType = transmissionType;
+        this.modelModification = modelModification;
+    }
+
+
     public Car() {
-        System.out.println("Конструктор класса CAR");
+        System.out.println("Кeflection in action: class constructor");
     }
 
     public void switchSpeedUp() {
@@ -63,4 +71,3 @@ public class Car {
                 '}';
     }
 }
-

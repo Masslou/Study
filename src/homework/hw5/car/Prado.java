@@ -2,18 +2,27 @@ package homework.hw5.car;
 
 public class Prado extends Toyota {
 
-    public Prado(boolean fourWheelDrive, int speed, String transmissionType, String model) {
-        super(fourWheelDrive, speed, transmissionType, model);
+
+    public Prado(boolean fourWheelDrive, int speed, Transmission transmissionType, String model) {
+        super(fourWheelDrive, speed, transmissionType.name(), model);
     }
 
     public Prado() {
-        System.out.println("Конструктор класса PRADO");
+        super();
     }
-
 
     public void switchFourWheelDriveOption() {
         fourWheelDrive = true;
-        System.out.println(String.format("Toyota %s 4x4 option activated", Prado.class.getSimpleName()));
+        System.out.println(String.format("%s 4x4 option activated", carInformation));
     }
 
+    @Override
+    public void start() {
+        System.out.println(String.format("%s %s start moving ", carInformation, modelModification));
+    }
+
+    @Override
+    public void switchSpeedUp() {
+        System.out.println(String.format("Speed switch up on %s Camry by %s transmission", MANUFACTURER_NAME, transmissionType));
+    }
 }
