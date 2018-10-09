@@ -22,6 +22,11 @@ public class Prado extends Toyota {
     }
 
     @Override
+    public void stop() {
+        System.out.println(String.format("%s stopping", carInformation));
+    }
+
+    @Override
     public void switchSpeedUp() {
         System.out.println(String.format("Speed switch up on %s Camry by %s transmission", MANUFACTURER_NAME, transmissionType));
     }
